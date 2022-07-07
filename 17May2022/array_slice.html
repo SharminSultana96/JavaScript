@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		//var computer = ["Dell", "Gateway", "Apple","IBM","HP"];
+
+		//var sliceditems = computer.slice(0,1);
+		//var sliceditems = computer.slice(-2,-1);
+
+		//document.write(sliceditems);
+	</script>
+	<h2>JavaScript Array Splice</h2>
+
+	<!-- <p>The Array.splice() method adds array elements:</p> -->
+	<p>The Array.splice() method remove array elements:</p>
+
+	<h2 id="demo"></h2>
+
+	<script>
+		//var fruits = ["Banana","Orange","Apple","Mango"];
+
+		//At position 2, add 2 elements:
+		//fruits.splice(2, 0, "Lemon","kiwi");
+
+		//document.getElementById("demo").innerHTML = fruits;
+
+	</script>
+	<script>
+		var fruits = ["Banana","Orange","Apple","Mango","kiwi"];
+
+		// At position 2, remove 2 elements:
+		fruits.splice(0,2, "Apple");
+
+		document.getElementById("demo").innerHTML = fruits;
+
+	</script>
+</body>
+</html>

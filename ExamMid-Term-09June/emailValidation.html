@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Question 2</title>
+</head>
+<body>
+	<script>
+		function emailValidation(){
+			var email = prompt(document.myform.email.value);
+			var emailVerifyed = email.search(/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+			var status = false;
+			if(email==-1){
+				alert("Email address is Wrong");
+				return false;
+			}else{
+				alert("Email address is Correct");
+			}
+		}
+	</script>
+	<form name="myform">
+		Email<br>
+		<input type="text" name="email" placeholder="Enter valid Email"><br>
+		Password <br>
+		<input type="button" value="Login" onclick="emailValidation()">	
+	</form>
+</body>
+</html>

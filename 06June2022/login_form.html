@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2>Check Validation</h2>
+	<script>
+		function form_validation(){
+			var fullname = document.login.fullname.value.length;
+			var password = document.login.password.value.length;
+			var status = false;
+			if(fullname<6){
+				alert("at least 6 character");
+				return false
+				
+			}else{
+				status = true;
+			}
+			if(password>8){
+				alert("maximum 8 character");
+				return false
+				
+			}else{
+				status = true;
+			}
+			else("All are validated");
+		}
+		
+	</script>
+	<form name="login" class="Check">
+	Username<input type="text" name="fullname" placeholder="Enter your fullname"><br>
+	Password<input type="text" name="password" value=""><br>
+	<input type="button" onclick="form_validation()" value="SUBMIT">
+</form>
+<div id="show"></div>
+	
+</body>
+</html>

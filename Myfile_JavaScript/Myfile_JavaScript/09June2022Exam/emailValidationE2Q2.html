@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="myform">
+		<input type="email" name="email" placeholder="Enter your email"><br>
+		<input type="password" name="password" placeholder="Enter password"><br>
+		<input type="button" value="Login" onclick="form_validate()">
+	</form>
+
+	<script>
+		function form_validate(){
+			var email=document.myform.email.value;
+			var password=document.myform.password.value.length;
+			var pattern=email.search(/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+			var status=false;
+
+			if(pattern==-1){
+				alert("Email has no @ cherecter");
+				return false;
+			}else{
+				status=true;
+			}
+
+			if(password<6){
+				alert("Password must be 6 charectar or above")
+				return false;
+			}else{
+				status=true;
+			}
+
+			if(status==true){
+				alert("Email is validate")
+			}
+		}
+	</script>
+
+
+</body>
+</html>
+
+
+
+
+
+	<!-- <form name="info">
+       Name: <input type="email" name="email" placeholder="Enter your name"> <br>
+        Password <input type="password" name="pass" placeholder="Enter your password"> <br>
+        <input type="button" value="Submit" onclick="emailvalid()">
+
+    </form>
+
+    <script>
+        function emailvalid(){
+            var email = document.info.email.value;
+            var password = document.info.pass.value.length;
+            var pattern = email.search(/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+            
+            if(pattern==-1){
+                alert("Email not valid")
+            } else if(password<6){
+                alert("You have must be 5 chcaracter Password")
+            }else{
+                alert("All are input valid")
+            }
+
+        }
+    </script> -->
+

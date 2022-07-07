@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function loginFrom(){
+			var email = document.regForm.email.value;
+			var password = document.regForm.password.value.length;
+			var pattern = email.search(/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+			// alert(pattern);
+			var status = false;
+			 if(pattern==-1){
+			 alert("Email address is invalid");
+			 return false;
+			}else{
+				status = true;
+			}
+			if(password<6){
+				alert("password is minimum 6 character");
+				return false;
+			}else{
+				status = true;
+			}
+			if(status==true){
+				alert("All data are validated");
+			}
+		}
+
+	</script>
+	<form name="regForm">
+		Email<br>
+		<input type="text" name="email" placeholder=""><br>
+		Password<br>
+		<input type="password" name="password" value=""><br><br>
+		<input type="button" name="login" onclick="loginFrom()" value="Login">
+		
+	</form>
+</body>
+</html>

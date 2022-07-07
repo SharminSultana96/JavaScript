@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function goGetIt(){
+			window.location = document.seek.browseMe.value;
+			alert(window.location);
+		}
+	</script>
+	<form name="seek">
+		<p><input type="file" name="browseMe" size="40"></p>
+		<input type="button" value="Click here to load file." onclick="goGetIt();">
+		
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var myWindow;
+		function studentInfo() {
+			var studentId = document.stdEntry.id.value;
+			var name = document.stdEntry.fullname.value;
+			var course = document.stdEntry.course.value;
+			var year = document.stdEntry.year.value;
+
+			var display;
+			if (studentId=="") {
+				alert("Fillup the student ID");
+			}else if(name=="") {
+				alert("Fillup the student Name");
+			}else if(course=="") {
+				alert("Fillup the course");
+			}else if(year=="") {
+				alert("Fillup the year");
+			}else{
+				alert("All are submitted");
+			}
+			display += "Student Id:" + studentId + "<br>";
+			display += "Name:" + name + "<br>";
+			display += "Course:" + course + "<br>";
+			display += "Year:" + year + "<br>";
+			myWindow = window.open("","", "width=600, height=400, top=200, left=400");
+			myWindow.document.write(display);
+		}
+	</script>
+	<h2>Student Entry Form</h2>
+	<form name="stdEntry">
+		Student ID: <br>
+		<input type="text" name="id" placeholder=""><br>
+		Name: <br>
+		<input type="text" name="fullname" placeholder=""><br>
+		Course: <br>
+		<input type="text" name="course"><br>
+		Year/Section: <br>
+		<input type="" name="year"><br><br>
+		<input type="button" value="SUBMIT" onclick="studentInfo()">
+		<input type="button" value="CLOSE" onclick="mywindow.close()">
+		
+	</form>
+</body>
+</html>

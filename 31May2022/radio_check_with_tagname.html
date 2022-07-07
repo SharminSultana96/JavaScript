@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function radiocheck(){
+			var display = "Your answer is: \n";
+			// alert(hardware.length);
+			var items = document.getElementsByTagName('input');
+			for(var i=0; i<items.length; i++){
+				if(items[i].checked){
+					display += items[i].value + "\n";
+				}
+			}
+			
+			document.hardware.answer.value = display;
+		}
+		
+	</script>
+	<form name="hardware">
+		components:<br>
+		Pick one of the following as the most important:<br><br>
+		Cost<input type="radio" name="component" value="Cost"><br>
+		Reliability<input type="radio" name="component" value="Reliability"><br>
+		Reputation<input type="radio" name="component" value="Reputation"><br>
+		Case of use<input type="radio" name="component" value="Case of use"><br><br>
+
+		Which of the following do you plan to purchase with your computer? Check all that apply:<br><br>
+
+		Hardware items:<br>
+		Printer<input type="checkbox" name="Printer" class="item" value="Printer"><br>
+		High Capacity Disk<input type="checkbox" name="High Capacity Disk" class="item" value="High Capacity Disk"><br>
+		Scanner<input type="checkbox" name="Scanner" class="item" value="Scanner"><br>
+		Added Memory<input type="checkbox" name="Added Memory" class="item" value="Added Memory"><br>
+		<input type="button" onclick="radiocheck()" class="item" value="SEND Your Answer"><br>
+
+		Your answers is: <br>
+		<textarea name="answer" cols="30" rows="10"></textarea>
+
+
+
+
+
+	
+	</form>
+</body>
+</html>

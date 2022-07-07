@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function traineeData(){
+			var fullname=document.info.fullname.value;
+			var contact=document.info.contact.value;
+			var gender=document.info.gender.value;
+			var remarks=document.info.remarks.value;
+			var location=document.info.location.value;
+			var courses = document.getElementsByClassName("course");
+			 var selectedCourses = "<h4>SelectedCourses</h4>";
+			for(var i=0; i<courses.length; i++){
+				if(courses[i].checked){
+					selectedCourses += courses[i].value + ", ";
+				}
+			}
+			var display = "<h1>Trainees All Data</h1>";
+			display += "Name:" + fullname + "<br>";
+			display += "Contact:" + contact + "<br>";
+			display += "Gender:" + gender + "<br>";
+			display += "Remarks:" + remarks + "<br>";
+			display += "Location:" + location + "<br>";
+			display += selectedCourses + "<br>";
+			var mywin=window.open("", "", "height=400,width=500,top=400,left=500");
+
+			mywin.document.write(display);
+		}
+			 
+	</script>
+	<h2>Trainee's Form</h2>
+	
+	<form name="info">
+		Name:<br>
+		<input type="text" name="fullname" placeholder="Enter your fullname"><br><br>
+		Contact:<br>
+		<input type="text" name="contact" placeholder="Enter your contact number"><br><br>
+
+		Sex:<br>
+		Male<input type="radio" name="gender" value="male">
+		Female<input type="radio" name="gender" value="female"><br><br>
+
+		Courses:<br>
+		NT<input type="checkbox" name="NT" class="course" value="NT"><br>
+		IAD<input type="checkbox" name="IAD" class="course" value="IAD"><br>
+		DDD<input type="checkbox" name="DDD" class="course" value="DDD"><br>
+		ESAD<input type="checkbox" name="ESAD" class="course" value="ESAD"><br><br>
+
+		<select name="location">
+			<option value="">Select one</option>
+			<option value="Banani">Banani</option>
+			<option value=Dhanmondi>Dhanmondi</option>
+			<option value="Mirpur">Mirpur</option>
+		</select>
+		<br><br>
+		Remarks(Your Answer is): <br>
+		<textarea name="remarks" placeholder="Your Remarks Here" cols="30" rows="10"></textarea><br>
+		<br>
+		<input type="button" name="submit" value="SUBMIT" onclick="traineeData()"><br>	
+		
+	</form>
+</body>
+</html>
