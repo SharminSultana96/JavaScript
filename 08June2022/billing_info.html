@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function billingInfo(){
+			var firstName = document.myform.firstname.value;
+			var lastName = document.myform.lastname.value;
+			var gender = document.myform.gender.value;
+			var email = document.myform.email.value;
+			var address = document.myform.address.value;
+			var state = document.myform.state.value;
+			var zip = document.myform.zip.value;
+			var creditcard = document.myform.creditCard.value;
+
+			var languages = document.getElementsByClassName("lang");
+		SelectedLanguages = "<h3>SelectedLanguages</h3>";
+		for(var i=0; i<languages.length; i++){
+				if(languages[i].checked){
+					SelectedLanguages += languages[i].value + ", ";
+				}
+			}
+			var display = "<h1>All Information</h1>";
+			display += "First Name:" + firstName + "<br>";
+			display += "Last Name:" + lastName + "<br>";
+			display += "Gender:" + gender + "<br>";
+			display += SelectedLanguages + "<br>";
+			display += "Email:" + email + "<br>";
+			display += "Address:" + address + "<br>";
+			display += "State:" + state + "<br>";
+			display += "Zip:" + zip + "<br>";
+			display += "Credit Card:" + creditcard + "<br>";
+			
+			var mywin=window.open("", "", "height=400,width=500,top=400,left=500");
+
+			mywin.document.write(display);
+		}
+	</script>
+	<form name="myform">
+		First Name:<br><input type="text" name="firstname" placeholder=""><br>
+		Last Name:<br><input type="text" name="lastname" placeholder=""><br>
+		Gender:<br> Male<input type="radio" name="gender" value="male">
+		Female
+		<input type="radio" name="gender" value="female"><br>
+
+		Languages:<br>Telugu<input type="checkbox" name="telugu" class="lang" value="Telugu">
+		 English<input type="checkbox" name="english" class="lang" value="English">
+		 Hindi<input type="checkbox" name="hindi" class="lang" value="Hindi"><br>
+		 Email: <br><input type="text" name="email" placeholder="Enter valid Email"><br>
+		 Address: <br><textarea name="address" cols="30" rows="10" placeholder=""></textarea><br>
+		 State:<br>
+		 <select name="state">
+		 	<option value="" disabled selected>Choose State</option>
+		 	<option value="Bangladesh">Bangladesh</option>
+		 	<option value="India">India</option>
+		 	<option value="Srilanka">Srilanka</option>
+		 	<option value="New Zealand">New Zealand</option>	
+		 </select><br>
+		 Zip:<br> <input type="text" name="zip" placeholder=""><br>
+		 Credit Card Type:<br>
+		 <select name="creditCard">
+		 	<option value="" disabled selected>Choose Credit Card</option>
+		 	<option value="Debit">Debit</option>
+		 	<option value="Credit">Credit</option>
+		 	<option value="Master Card">Master Card</option>	
+		 </select><br>
+		 <input type="button" value="SUBMIT" onclick="billingInfo()">
+		
+	</form>
+</body>
+</html>

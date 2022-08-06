@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function traineeData(){
+			var fullname=document.info.fullname.value;
+			var contact=document.info.contact.value;
+			var remarks=document.info.remarks.value;
+			var sex=document.info.gender.value;
+			var location=document.info.location.value;
+			var courses = document.getElementsByClassName("course");
+			var selectedCourses = "<h3>SelectedCourses</h3>";
+			for (var i=0; i<courses.length; i++){
+				if(courses[i].checked){
+				selectedCourses += courses[i].value + ", ";	
+				}
+			}
+			var display = "<h1>Trainees All Data</h1>";
+			display += "Name" + fullname + "<br>";
+			display += "Contact" + contact + "<br>";
+			display += "Remarks" + remarks + "<br>";
+			display += "Sex" + sex + "<br>";
+			display += "Location" + location + "<br>";
+			display += selectedCourses + "<br>";
+			var mywin = window.open("", "", "width=600, height=400, top=200, left=500");
+			mywin.document.write(display);
+		}
+
+	</script>
+
+	<h2>Trainees Information</h2>
+
+	<form name="info">
+		Name <br>
+		<input type="text" name="fullname" placeholder="Enter your fullname"><br>
+		Contact <br>
+		<input type="text" name="Contact" placeholder="Enter your contact number"><br>
+		Remarks <br>
+		<textarea name="remarks" placeholder="Your Remarks Here" cols="30" rows="10"></textarea><br>
+		Sex <br>
+		Male<input type="radio" name="gender" value="male">
+		Female<input type="radio" name="gender" value="female"><br>
+		Courses <br>
+		NT<input type="checkbox" name="NT" class="course" value="NT">
+		IAD<input type="checkbox" name="IAD" class="course" value="IAD">
+		DDD<input type="checkbox" name="DDD" class="course" value="DDD">
+		ESAD<input type="checkbox" name="ESAD" class="course" value="ESAD"><br>
+
+		<select name="location">
+			<option value="">Select One</option>
+			<option value="Dhanmondi">Dhanmondi</option>
+			<option value="Banani">Banani</option>
+			<option value="Mohammadpur">Mohammadpur</option>
+			<option value="Gulshan">Gulshan</option>
+		</select>
+		<br><br>
+		<input type="button" name="submit" value="SUBMIT" onclick="traineeData()"><br>
+		<!-- <input type="button" name="close" value="CLOSE" onclick="mywin.close()"> -->
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.jnn{
+			background-color: powderblue;
+
+
+		}
+	</style>
+</head>
+<body>
+	<h2>Registration Form</h2>
+	<script type="text/javascript">
+		function form_validation(){
+			var fullname = document.regForm.fullname.value;
+			var email = document.regForm.email.value;
+			var gender = document.regForm.gender.value;
+			var phonenumber = document.regForm.phonenumber.value;
+			var language = document.regForm.language.value;
+			if(fullname==""){
+				alert("You have to put a fullname");
+			}else if(email==""){
+				alert("You have to put an email");
+			}else if(gender==""){
+				alert("You have to put a gender");
+			}else if(phonenumber==""){
+				alert("You have to put a phone number");
+			}else if(language==""){
+				alert("You have to put a language");
+			}
+			else{
+				alert("All are submitted");
+
+			}
+		}
+	</script>
+	<form name="regForm" class="jnn">
+		Name:<input type="text" name="fullname" placeholder="Enter Your Name"><br>
+		Email:<input type="text" name="email" placeholder="Enter Your Email"><br>
+		Gender:
+		Male:<input type="radio" name="gender" value="male">
+		female:<input type="radio" name="gender" value="female">
+		Others:<input type="radio" name="gender" value="others"><br>
+		Phone Number:<input type="text" name="phonenumber" placeholder="Enter Number"><br>
+		About:<textarea cols="20" rows="5" placeholder="write about yourself"></textarea><br>
+
+		<select name="language">
+		Language:
+		<option value="" >Select language</option>
+		<option value="Bangla">Bangla</option>
+		<option value="English">English</option>
+		<option value="Japaniese">Japaniese</option><br>
+	</select>
+		<input type="button" onclick="form_validation()" value="Register">
+		
+	</form>
+	
+</body>
+</html>

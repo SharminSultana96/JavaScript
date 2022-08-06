@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function validation() {
+			var email = document.myForm.email.value;
+			var password = document.myForm.password.value.length;
+			var emailvalidation = email.search(/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+			status = false;
+			if(emailvalidation==-1){
+			alert("Email is invalid");
+			return false;
+		}else if(password<6){
+			alert("Your password minimum 6 charectar");
+			return false;
+		}else{
+			status = true;
+		}
+		if(status==true) {
+			alert("All are validated");
+		}
+	}
+	
+	</script>
+	<h1>Email Validation</h1>
+	<form name="myForm">
+		Email <br>
+		<input type="email" name="email" placeholder="Enter"><br>
+		Password <br>
+		<input type="password" name="password" value=""><br><br>
+		<input type="button" value="Login" onclick="validation()">
+	</form>
+
+
+
+	<!-- <form name="info">
+       Name: <input type="email" name="email" placeholder="Enter your name"> <br>
+        Password <input type="password" name="pass" placeholder="Enter your password"> <br>
+        <input type="button" value="Submit" onclick="emailvalid()">
+
+    </form>
+
+    <script>
+        function emailvalid(){
+            var email = document.info.email.value;
+            var password = document.info.pass.value.length;
+            var pattern = email.search(/^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+            
+            if(pattern==-1){
+                alert("Email not valid")
+            } else if(password<6){
+                alert("You have must be 5 chcaracter Password")
+            }else{
+                alert("All are input valid")
+            }
+
+        }
+    </script> -->
+</body>
+</html>

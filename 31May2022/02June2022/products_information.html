@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function products(){
+		var productname = document.productsInfo.productname.value;
+		var productDetails = document.productsInfo.productDetails.value;
+		var productType = document.productsInfo.productType.value;
+		var categories = document.getElementsByClassName("product");
+		SelectedCategories = "<h3>SelectedCategories</h3>";
+		for(var i=0; i<categories.length; i++){
+				if(categories[i].checked){
+					SelectedCategories += categories[i].value + ", ";
+				}
+			}
+			var display = "<h1>products All Information</h1>";
+			display += "Product Name:" + productname + "<br>";
+			display += "Products Details:" + productDetails + "<br>";
+			display += "Product Type:" + productType + "<br>";
+			display += SelectedCategories + "<br>";
+			var mywin=window.open("", "", "height=400,width=500,top=400,left=500");
+
+			mywin.document.write(display);
+
+		}
+
+	</script>
+
+	<h2>Products Information</h2>
+	<form name="productsInfo">
+		<b>Product Name:</b><br>
+		<input type="text" name="productname" placeholder="Enter Product Name"><br><br>
+		<b>Products Details:</b><br>
+		<textarea name="productDetails" placeholder="Enter Product Details" cols="30" rows="10"></textarea><br><br>
+		<b>Product Type:</b><br>
+		Brand New<input type="radio" name="productType" value="brand new">
+		Second Hand<input type="radio" name="productType" value="second hand">
+		Refurbished<input type="radio" name="productType" value="refurbished"><br><br>
+		<b>Selecting Categories:</b><br>
+		Shirt<input type="checkbox" name="Shirt" class="product" value="Shirt"><br>
+		Trouser<input type="checkbox" name="Trouser" class="product" value="Trouser"><br>
+		Pullover<input type="checkbox" name="Pullover" class="product" value="Pullover"><br>
+		Sweater<input type="checkbox" name="Sweater" class="product" value="Sweater"><br><br>
+
+		<input type="button" name="submit" value="SUBMIT" onclick="products()"><br>
+			
+	
+	</form>
+</body>
+</html>

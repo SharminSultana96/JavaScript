@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maximum/Minimum</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var numbers = [68, 58, 98, 69, 121, 174];
+
+
+		var max=0;
+		var min=number[0];
+
+		for(var i in numbers){
+// Maximum numbers
+			if(max>numbers[i]){
+				max = max;
+			}
+			else{
+				max = numbers[i];
+			}
+// Minimum numbers
+				if(min<numbers[i]){
+				min = min;			
+			}
+			else{
+				min = numbers[i];
+			}
+		}
+
+		document.write("<h2> Maximum number is: " + max + "</h2>");
+		document.write("<h2> Minimum number is: " + min + "</h2>");
+	</script>
+</body>
+</html>

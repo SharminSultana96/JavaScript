@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prime Number</title>
+</head>
+<body>
+	<h1>Find Prime Number</h1>
+	<script type="text/javascript">
+		function prime(n){
+			var x = 0;
+			for(var i=1; i<=n; i++){
+				for(var j=2; j<=i-1; j++){
+					if(i%j==0){
+						x+=1;
+					}
+				}
+				if(x==0){
+					document.write(i + "<br>");
+				}
+				else{
+					x=0;
+				}
+			}
+		}
+		document.write(prime(100));
+	</script>
+</body>
+</html>

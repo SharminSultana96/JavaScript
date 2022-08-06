@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prime Number</title>
+</head>
+<body>
+	<h1>Prime Number</h1>
+	<script type="text/javascript">
+		function primeNum(n){
+			if(n==1){
+				return n + "is not a prime number";
+			}
+			else if(n==2){
+				return n + "is a prime number"
+			}else{
+				for (var x = 0; x < n; x++){
+					if(n % x == 0){
+					return n + "is not a prime number"
+				}
+
+				}
+				return n + "is a prime number"
+			}
+		}
+		var Number = parseInt(prompt("Enter Number", ""));
+		document.write(primeNum(Number));
+		// document.getElementById("Prime Number").innerHTML =  primeNum(Number);
+	</script>
+	<!-- <h1 id="Prime Number"></h1> -->
+</body>
+</html>

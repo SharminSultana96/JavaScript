@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Evidence 1 Question No 3</h1>
+    <form name="myform">
+    <input type="date" name="date" value="">
+    <input type="button" onclick="show()" value="Show Date">
+  </form>
+
+  <script>
+  function show(){
+    var date = document.myform.date.value;
+    var mydate = new Date(date);
+    var day = ["Sun","Mon","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+    var display="";
+    display +=  day[mydate.getDay()] + "\n";
+    display +=  mydate.getFullYear();
+    
+    alert(display);
+  }
+  </script>
+
+   <!--  <form name="myform">
+      <input type="date" name="mydate" value="">
+      <input type="button" onclick="func()" value="SUBMIT">
+    </form>
+
+     <script>
+      function func(){
+        var curdate = document.myform.mydate.value;
+        var show = new Date(curdate);
+        var week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+        var display="";
+        display += week[show.getDay()]  + "\n";
+        display += show.getFullYear();
+        
+          alert(display);
+      }
+    </script> -->
+
+
+
+<<!-- script>
+  function myDay() {
+    var current_date = document.myForm.myDate.value;
+    var show = new Date(current_date);
+    var week = ["Sunday","Monday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+    var display="";
+    display += week[show.getDay()] + "\n";
+    display += show.getFullYear();
+
+    alert(display);
+  }
+</script>
+    <h2>Get Date/Day</h2>
+    <form name="myForm">
+      <input type="date" name="myDate" value="">
+      <input type="button" value="SUBMIT" onclick="myDay()">
+    </form> -->
+</body>
+</html>

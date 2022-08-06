@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function profile_info(){
+			var firstname = document.info.firstname.value;
+			var lastname = document.info.lastname.value;
+			var gender = document.info.gender.value;
+			var district = document.info.district.value;
+			var profile = document.info.profile.value;
+			var output ="";
+
+			output = "<hr>Firstname:" + firstname + "<br>";
+			output = "Lastname:" + lastname + "<br>";
+			output = "Gender:" + gender + "<br>";
+			output = "District:" + district + "<br>";
+			output = "Profile:" + profile;
+
+			document.getElementById("Shows").innerHTML = output;
+		}
+
+	</script>
+	<div id="Show"></div>
+
+	<h1>Personal Information</h1>
+	<form action="" name="Info">
+		First Name: <br>
+		<input type="text" name="firstname" placeholder="Enter your first name"><br><br>
+		Last Name: <br>
+		<input type="text" name="lastname" placeholder="Enter your last name"><br><br>
+
+		Gender: <br>
+		Male<input type="radio" name="gender" value="male">
+		Female<input type="radio" name="gender" value="female">
+		Others<input type="radio" name="gender" value="others"><br><br>
+
+		District: <br>
+		<select name="district">
+		<option value="" disabled selected>Select one</option>
+		<option value="Dhaka">Dhaka</option>
+		<option value="Chittagong">Chittagong</option>
+		<option value="Chandpur">Chandpur</option>
+	</select>
+	<br><br>
+
+	Hobbies: <br>
+	Cricket<input type="checkbox" name="cricket">
+	Football<input type="checkbox" name="football">
+	Batminton<input type="checkbox" name="batminton"><br><br>
+
+	Profile: <br>
+	<textarea name="profile" rows="15px" cols="35px"></textarea><br><br>
+
+	<input type="button" value="SEND" onclick="">
+	<input type="reset" value="RESET" onclick="reset()">
+	</form>
+
+	
+</body>
+</html>
